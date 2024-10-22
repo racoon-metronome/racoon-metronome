@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  title: Racoon Metronome
+  version: '0.1'
+servers:
+- url: http://localhost:20000/api
+tags: []
+paths:
+  /health:
+    get:
+      responses:
+        '200':
+          description: ''
+  /start:
+    post:
+      responses:
+        '200':
+          description: ''
+  /play:
+    post:
+      responses:
+        '200':
+          description: ''
+  /pause:
+    post:
+      responses:
+        '200':
+          description: ''
+  /stop:
+    post:
+      responses:
+        '200':
+          description: ''
+  /push:
+    post:
+      responses:
+        '200':
+          description: ''
+  /set_bpm/{bpm}:
+    post:
+      parameters:
+      - name: bpm
+        schema:
+          type: integer
+          format: uint64
+        in: path
+        required: true
+        deprecated: false
+        explode: true
+      responses:
+        '200':
+          description: ''
+components:
+  schemas: {}

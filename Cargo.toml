@@ -1,0 +1,15 @@
+[package]
+name = "racoon"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+if-addrs = "0.12.0"
+rodio = "0.19.0"
+spin_sleep = "1.2.0"
+poem = { version = "3.1.0", features = ["compression", "static-files", "websocket"] }
+poem-openapi = { version = "5.1.0", features = ["swagger-ui", "redoc"] }
+tokio ={  version = "1.40.0", features = ["rt-multi-thread"]}
+port_check = "0.2.1"
+local-ip-address = "0.6.3"
+qrcode = "0.14.1"
