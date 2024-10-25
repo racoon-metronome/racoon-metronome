@@ -54,7 +54,7 @@ async fn main() -> Result<(), std::io::Error> {
     let mut locals = Vec::with_capacity(10);
 
     let likely_local_qr = if let Ok(ip) = likely_local {
-        let code = QrCode::new(&format!("{ip}:{port}")).unwrap();
+        let code = QrCode::new(&format!("http://{ip}:{port}")).unwrap();
         code.render::<unicode::Dense1x2>()
             .quiet_zone(true)
             .dark_color(unicode::Dense1x2::Light)
